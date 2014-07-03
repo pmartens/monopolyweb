@@ -1,0 +1,29 @@
+<table id="navigation">
+  <tr><td><%= button_to 'Home', root_path, :method => :get %><%= button_to 'Reset game', game_path, :method => :get %></td></tr>
+  <tr class="header"><td class="label">Player settings</td><td></td></tr>
+  <% $monopoly.settings.players.each do |player| %>
+      <tr class="subheader">
+        <td>Player:</td>
+        <td><%= player.name %></td>
+      </tr>
+      <tr>
+        <td>Position:</td>
+        <td><%= $monopoly.gameboard.space(player.position).name %>(<%= player.position %>)</td>
+      </tr>
+      <tr>
+        <td>Money:</td>
+        <td><%= player.money %></td>
+      </tr>
+  <% end %>
+  <tr class="header">
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Thrown:</td>
+    <td><%= "#{$monopoly.settings.dice.value} ( #{$monopoly.settings.dice.values.join(",")} )" %></td>
+  </tr>
+  <tr>
+    <td><%= button_to "#{$monopoly.active_player.name} Throws!", throw_dice_game_path, :method => :get %></td>
+  </tr>
+</table>
