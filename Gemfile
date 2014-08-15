@@ -26,7 +26,9 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
-gem 'graylog2_exceptions'
+#gem 'graylog2_exceptions'
+
+gem 'activerecord-session_store'
 
 gem 'game_library', :path => '../game_library' #, git: "git@github.com:cgservices/spree_cgpay.git"
 

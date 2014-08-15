@@ -23,12 +23,12 @@ module Monopolyweb
 
     #echo '{"version": "1.1","host":"example.org","short_message":"A short message that helps you identify what is going on","full_message":"Backtrace here\n\nmore stuff","level":1,"_user_id":9001,"_some_info":"foo","_some_env_var":"bar"}' | nc -w 1 -u 10.233.237.183 12201
 
-    config.middleware.use "Graylog2Exceptions", { :hostname => "10.233.237.183",
-                                                  :port => 12201,
-                                                  :local_app_name => "recharge",
-                                                  :facility => "rails_exceptions",
-                                                  :max_chunk_size => "LAN",
-                                                  :level => 3,
-                                                  :host => "Recharge" }
+    # config.middleware.use "Graylog2Exceptions", { :hostname => "10.233.237.183",
+    #                                               :port => 12201,
+    #                                               :local_app_name => "recharge",
+    #                                               :facility => "rails_exceptions",
+    #                                               :max_chunk_size => "LAN",
+    #                                               :level => 3,
+    #                                               :host => "Recharge" }
   end
 end

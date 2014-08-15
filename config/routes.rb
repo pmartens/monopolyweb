@@ -9,8 +9,12 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
-  get 'game' => 'game#index'
-  get 'game/throw_dice' => 'game#throw_dice', :as => :throw_dice_game
+  #get 'game' => 'game#index'
+  #get 'game/throw_dice' => 'game#throw_dice', :as => :throw_dice_game
+
+  resources :game, only: [:index, :new, :update ]
+
+  get 'game/update' => 'game#update'
 
   # Resources route for Players
   resources :players do
