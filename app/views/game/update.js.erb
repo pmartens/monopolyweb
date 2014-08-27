@@ -1,0 +1,17 @@
+$('#nav').html("<%= escape_javascript(render(:partial => 'navigation')).html_safe %>");
+$('#pot').html("<%= escape_javascript(render(:partial => 'pot')).html_safe %>");
+
+<% player = @monopoly.settings.players.index(@monopoly.active_player) + 1 %>
+
+<% if player == 1 %>
+    $("#player1").html("<%= escape_javascript(render(:partial => 'player1')).html_safe %>");
+<% end %>
+<% if player == 2 %>
+    $("#player2").html("<%= escape_javascript(render(:partial => 'player2')).html_safe %>");
+<% end %>
+<% if player == 3 %>
+    $("#player3").html("<%= escape_javascript(render(:partial => 'player3')).html_safe %>");
+<% end %>
+<% if player == 4 %>
+    $("#player4").html("<%= escape_javascript(render(:partial => 'player4')).html_safe %>");
+<% end %>

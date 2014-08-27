@@ -1,0 +1,13 @@
+<% if !@game_message.nil? %>
+    <div id="error_explanation">
+        <%= @game_message.message %>
+        <%= button_to 'Home', root_path, :method => :get %>
+    </div>
+<% else %>
+    <%= render 'gameboard' %>
+    <div id="player1"><%= render 'player1' %></div>
+    <div id="player2"><%= render 'player2' %></div>
+    <div id="player3"><%= render 'player3' %></div>
+    <div id="player4"><%= render 'player4' %></div>
+    <div id="nav"><%= render 'navigation' %></div>
+<% end %>

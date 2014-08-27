@@ -1,0 +1,149 @@
+// Place all the styles related to the game controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#error_explanation {
+  position: absolute;
+  z-index: 3;
+  color: black;
+  height: 50%;
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#gameboard {
+  position: fixed;
+  z-index: 1;
+  top: 10px;
+  left: 10px;
+
+  border: 1px solid black;
+
+  td {
+    width: 75px;
+    height: 75px;
+  }
+
+  .space {
+    background-color: lemonchiffon;
+    border: 1px solid black;
+    text-align: center;
+    font-style: normal;
+    font-size: 10px;
+    font-weight: bold;
+  }
+
+  .pot {
+    background-color: darkolivegreen;
+    border: 1px solid black;
+    text-align: center;
+    font-style: normal;
+    font-size: 14px;
+    font-weight: bold;
+  }
+}
+
+#player1 {
+  position: fixed;
+  z-index: 2;
+  top: 10px;
+  left: 10px;
+
+  border: 1px solid black;
+
+  font-size: 14px;
+  font-weight: bold;
+  color: red;
+
+  .space {
+    width: 75px;
+    height: 75px;
+    border: 1px solid black;
+  }
+}
+
+#player2 {
+  position: fixed;
+  z-index: 2;
+  top: 10px;
+  left: 10px;
+
+  border: 1px solid black;
+
+  font-size: 14px;
+  font-weight: bold;
+  color: blue;
+
+  .space {
+    width: 75px;
+    height: 75px;
+    border: 1px solid black;
+  }
+}
+
+#player3 {
+  position: fixed;
+  z-index: 2;
+  top: 10px;
+  left: 10px;
+
+  border: 1px solid black;
+
+  font-size: 14px;
+  font-weight: bold;
+  color: green;
+
+  .space {
+    width: 75px;
+    height: 75px;
+    border: 1px solid black;
+  }
+}
+
+ #player4 {
+   position: fixed;
+   z-index: 2;
+   top: 10px;
+   left: 10px;
+
+   border: 1px solid black;
+
+   font-size: 14px;
+   font-weight: bold;
+   color: yellow;
+
+   .space {
+     width: 75px;
+     height: 75px;
+     border: 1px solid black;
+   }
+ }
+
+#navigation {
+  position: absolute;
+  z-index: 1;
+  left: 950px;
+  top: 10px;
+  width: 500px;
+
+  .header {
+    background-color: darkred;
+    border: 1px solid black;
+    color: white;
+    height: 15px;
+  }
+  .subheader {
+    background-color: #C0C0C0;
+    border: 1px solid black;
+    color: black;
+    height: 15px;
+  }
+
+
+  .label {
+    width: 150px;
+  }
+}
