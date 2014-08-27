@@ -26,11 +26,7 @@ class GameController < ApplicationController
   def get_game
     @monopoly = session[:monopoly]
     if @monopoly.nil?
-      p = []
-      players = Player.all
-      players.each do |player|
-        p << Monopoly::Player.new(player.name)
-      end
+      p = Player.all.map{|p| Monopoly::Player.new(p.name)}
       settings = Monopoly::Settings.new(p)
       @monopoly = Monopoly::Monopoly.new(settings)
     else
